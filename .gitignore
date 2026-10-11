@@ -6,5 +6,3 @@ workflow.txt
 
 __pycache__/
 *.pyc
-
-*.csv
