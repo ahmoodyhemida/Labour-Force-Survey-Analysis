@@ -42,9 +42,9 @@ Adapted from Statistics Canada, Labour Force Survey: Public Use Microdata File, 
 ```text
 .
 ├── 2025-CSV/                 
-│   └── Documents/            # User guide, codebook and record layout
+│   └── Documents/            # User guide, codebook and notes for users
 |   └── Data/                 # Monthly LFS PUMF files (Jan to Dec 2025)
-├── notebook.ipynb            # Loading and initial filtering
+├── notebook.ipynb            # Loading, filtering and Excel export
 ├── requirements.txt
 └── README.md
 ```
@@ -82,7 +82,7 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-If you are not opening the notebook in VS Code, install Jupyter as well:
+`ipykernel` is included so the notebook runs in VS Code. To open it in a browser instead, install Jupyter as well:
 
 ```bash
 pip install jupyter
@@ -90,12 +90,13 @@ pip install jupyter
 
 ### Prepare the database and data
 
-1. Start a local PostgreSQL server and update the connection string in the second cell of `notebook.ipynb`.
-2. Download the 2025 CSV files from Statistics Canada and place them in `2025-CSV/Data/`.
+1. Start a local PostgreSQL server. The notebook needs one running before it will connect.
+2. In the second cell of `notebook.ipynb`, update the connection string. It appears twice, in the `%sql` line and in `create_engine`. Keep the `postgresql+psycopg2://` prefix so SQLAlchemy 2.1 and later use the installed driver.
+3. The 12 monthly CSV files are already in `2025-CSV/Data/`. To refresh them, download the 2025 CSV files from Statistics Canada and replace them there.
 
 ### Run the notebook
 
-Open `notebook.ipynb` in VS Code or Jupyter and run the cells in order.
+Open `notebook.ipynb` in VS Code or Jupyter and run the cells in order. The last cell exports the respondent-level wage data to a timestamped `wage_estimates_*.xlsx` file in the project root. These files are about 20 MB each and are ignored by git.
 
 ## Results
 

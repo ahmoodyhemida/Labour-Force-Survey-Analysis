@@ -1,4 +1,6 @@
 pandas
 sqlalchemy
 psycopg2-binary
-ipython-sql
+jupysql
+openpyxl
+ipykernel
