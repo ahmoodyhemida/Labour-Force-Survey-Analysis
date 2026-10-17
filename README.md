@@ -4,20 +4,14 @@
 
 This project analyzes Statistics Canada's Labour Force Survey (LFS) microdata for 2025. It uses a five-stage workflow across Python (pandas) and PostgreSQL for loading, cleaning, and filtering, Excel for the analysis, Power BI for charts, and PowerPoint for the final presentation.
 
-## Planned Analysis (Draft)
-
-**How do hourly wages in Canada differ by education, age group, industry and province in 2025, and what wage premium does each education level earn?**
-
-The question may be refined once the data has been cleaned and explored.
-
 ## Workflow
 
-| Step | Tool | Purpose | Status |
-|------|------|---------|--------|
-| 1 | Python (pandas) & PostgreSQL | Load the 12 monthly files into one table, then clean, decode and filter the data | Raw load complete, cleaning not started |
-| 2 | Excel | Weighted estimates, wage comparisons and scenario analysis | Not started |
-| 3 | Power BI | Interactive charts and dashboard | Not started |
-| 4 | PowerPoint | Findings, recommendations and limitations | Not started |
+| Step | Tool | Purpose |
+|------|------|---------|
+| 1 | Python (pandas) & PostgreSQL | Load the 12 monthly files into one table, then clean, decode and filter the data |
+| 2 | Excel | Weighted estimates, wage comparisons and scenario analysis |
+| 3 | Power BI | Interactive charts and dashboard |
+| 4 | PowerPoint | Findings, recommendations and limitations |
 
 ## Data
 
