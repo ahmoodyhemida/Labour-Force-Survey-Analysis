@@ -85,12 +85,12 @@ pip install jupyter
 ### Prepare the database and data
 
 1. Start a local PostgreSQL server. The notebook needs one running before it will connect.
-2. In the second cell of `notebook.ipynb`, update the connection string. It appears twice, in the `%sql` line and in `create_engine`. Keep the `postgresql+psycopg2://` prefix so SQLAlchemy 2.1 and later use the installed driver.
+2. In the second cell of `notebook.ipynb`, change `db_url` to match your own PostgreSQL setup. Keep the `postgresql+psycopg2://` prefix so SQLAlchemy 2.1 and later use the installed driver.
 3. The 12 monthly CSV files are already in `2025-CSV/Data/`. To refresh them, download the 2025 CSV files from Statistics Canada and replace them there.
 
 ### Run the notebook
 
-Open `notebook.ipynb` in VS Code or Jupyter and run the cells in order. The last cell exports the respondent-level wage data to a timestamped `wage_estimates_*.xlsx` file in the project root. These files are about 20 MB each and are ignored by git.
+Open `notebook.ipynb` in VS Code or Jupyter and run the cells in order. The last cell exports the respondent-level wage data to a timestamped `wage_estimates_*.xlsx` file in the project root.
 
 ## Results
 
