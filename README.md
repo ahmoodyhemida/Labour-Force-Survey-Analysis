@@ -2,7 +2,7 @@
 
 > **Status:** Work in progress. The 2025 data is loaded into PostgreSQL. Cleaning and analysis are next.
 
-This project analyzes Statistics Canada's Labour Force Survey (LFS) microdata for 2025. It uses a four-step workflow: PostgreSQL for loading, cleaning and filtering, Excel for the analysis, Power BI for charts, and PowerPoint for the final presentation.
+This project analyzes Statistics Canada's Labour Force Survey (LFS) microdata for 2025. It uses a five-stage workflow across Python (pandas) and PostgreSQL for loading, cleaning, and filtering, Excel for the analysis, Power BI for charts, and PowerPoint for the final presentation.
 
 ## Planned Analysis (Draft)
 
@@ -14,7 +14,7 @@ The question may be refined once the data has been cleaned and explored.
 
 | Step | Tool | Purpose | Status |
 |------|------|---------|--------|
-| 1 | PostgreSQL | Load the 12 monthly files into one table, then clean, decode and filter the data | Raw load complete, cleaning not started |
+| 1 | Python (pandas) & PostgreSQL | Load the 12 monthly files into one table, then clean, decode and filter the data | Raw load complete, cleaning not started |
 | 2 | Excel | Weighted estimates, wage comparisons and scenario analysis | Not started |
 | 3 | Power BI | Interactive charts and dashboard | Not started |
 | 4 | PowerPoint | Findings, recommendations and limitations | Not started |
@@ -91,7 +91,7 @@ pip install jupyter
 ### Prepare the database and data
 
 1. Start a local PostgreSQL server and update the connection string in the second cell of `notebook.ipynb`.
-2. Download the 2025 CSV files from Statistics Canada and place them in `2025-CSV/`.
+2. Download the 2025 CSV files from Statistics Canada and place them in `2025-CSV/Data/`.
 
 ### Run the notebook
 
